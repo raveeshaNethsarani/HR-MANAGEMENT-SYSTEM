@@ -120,3 +120,39 @@ export const requestLeave = (data: { leave_type: string; start_date: string; end
   request("/api/LeaveRequests", json("POST", data));
 export const setLeaveStatus = (id: string, status: "approved" | "rejected" | "cancelled") =>
   request(`/api/LeaveRequests/${id}`, json("PATCH", { status }));
+
+/* ----------------------------------------- api object (used by App.tsx) ------------------- */
+
+export const api = {
+  auth: {
+    login: (email: string, password: string, organization_id?: string) =>
+      login(email, password, organization_id),
+    logout,
+    me: getMe,
+    forgotPassword,
+    resetPassword,
+    changePassword,
+  },
+  employees: {
+    list: getEmployees,
+    create: createEmployee,
+  },
+  designations: {
+    list: getDesignations,
+    create: createDesignation,
+    update: updateDesignation,
+  },
+  organizations: {
+    list: getOrganizations,
+    create: createOrganization,
+    update: updateOrganization,
+  },
+  roles: {
+    create: createRole,
+  },
+  leave: {
+    balances: getLeaveBalances,
+    request: requestLeave,
+    setStatus: setLeaveStatus,
+  },
+};
