@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { ALL_PERMISSIONS } from "@/src/app/constant/permissions";
+import { ALL_PERMISSIONS } from "../app/constant/permissions";
 
 const permissions = z
   .array(z.enum(ALL_PERMISSIONS))
