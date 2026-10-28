@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { EMPLOYMENT_STATUSES } from "@/src/app/constant/enums";
+import { EMPLOYMENT_STATUSES } from "../app/constant/enums";
 import { objectId, phone, dateString } from "./common";
 
 /**

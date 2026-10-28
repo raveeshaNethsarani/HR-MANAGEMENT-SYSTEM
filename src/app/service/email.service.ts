@@ -1,5 +1,5 @@
 import nodemailer, { type Transporter } from "nodemailer";
-import { application } from "../../app/config/application";
+import { application } from "@/app/config/application";
 
 let transporter: Transporter | null = null;
 

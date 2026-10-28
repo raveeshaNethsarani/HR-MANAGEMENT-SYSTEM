@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { CANDIDATE_SOURCES, CANDIDATE_STATUSES } from "@/src/app/constant/enums";
+import { CANDIDATE_SOURCES, CANDIDATE_STATUSES } from "../app/constant/enums";
 
 export const candidateCreateSchema = z
   .object({
