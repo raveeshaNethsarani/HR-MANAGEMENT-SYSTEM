@@ -1,3 +1,2 @@
-export default function RolesPage() {
-  return <div>Roles</div>;
-}
+import { ResourceTable } from "@/app/components/ResourceTable";
+export default function RolesPage() { return <ResourceTable type="roles" />; }
